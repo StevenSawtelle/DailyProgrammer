@@ -1,6 +1,6 @@
 	import java.util.*;
 	
-	//Challenge 290 - Kaprekar Numbers
+	//Challenge 290 - Kaprekar Numbers Oct 31, 2016
 	public class Kaprekar {
 	
 		public static void main(String[] args) {
