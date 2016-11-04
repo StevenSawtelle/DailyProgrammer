@@ -6,22 +6,22 @@ public class Rovarspraket {
 	public static void main(String[] args) {
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader inp = new BufferedReader(isr);
+		
 		String word="";
 		try{
 		word = inp.readLine().trim();
 		}catch(Exception e){}
 		List<Character> chars = new ArrayList<Character>();
-		for(int i=0;i<word.length();i++){
+		for(int i=0;i<word.length();i++){//add all chars of string to char array
 			chars.add(word.charAt(i));
 		}
-		String notok = "AEIOUaeiou.'/?!@#$%^&*()-_<>;: ";
+		String notok = "AEIOUaeiou.'/?!@#$%^&*()-_<>;: ";//chars to not double with a middle o
 		String fWord="";
-		int countTo=word.length();
-		for(int i=0;i<countTo;i++){
-			if(notok.indexOf(chars.get(i))>-1){
+		for(int i=0;i<word.length();i++){
+			if(notok.indexOf(chars.get(i))>-1){//if vowel or punc, no double
 				fWord+=chars.get(i);
 			}
-			else{
+			else{//otherwise, add letter + "o" + letter
 				fWord+=chars.get(i)+"o"+Character.toLowerCase(chars.get(i));
 			}
 		}
